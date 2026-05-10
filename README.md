@@ -59,5 +59,7 @@ Dica para o Git:
 Como você vai dar o commit agora, você pode usar:
 
 git add README.md
+
 git commit -m "docs: adiciona documentação do sistema ITAM"
+
 git push origin main
