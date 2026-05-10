@@ -1,6 +1,3 @@
-Show! Adicionei o seu perfil e o repositório específico no arquivo. Deixei a seção de prints comentada ou como "Em desenvolvimento" para você preencher depois que a HUD estiver 100% do seu agrado.
-
-Aqui está o README.md personalizado para o seu repo:
 📑 Sistema de Estoque ITAM
 
 O ITAM (IT Asset Management) é uma ferramenta desenvolvida em Python para o gerenciamento de periféricos e hardware. Criado para facilitar o controle de inventário com uma interface gráfica intuitiva e persistência de dados.
