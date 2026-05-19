@@ -7,7 +7,7 @@ from tkinter import ttk
 conn = sqlite3.connect('itam.db')
 cursor = conn.cursor()
 
-# Criar tabela se não existir
+# --- Criar tabela se não existir ---
 cursor.execute('''
     CREATE TABLE IF NOT EXISTS perifericos (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -17,6 +17,8 @@ cursor.execute('''
     )
 ''')
 conn.commit()
+
+# --- Função para salvar dados no banco de dados ---
 
 def salvar_dados(p, m, q_texto, entry_periferico, entry_modelo, entry_qtd):
     if not p or not m or not q_texto:
@@ -47,6 +49,8 @@ def salvar_dados(p, m, q_texto, entry_periferico, entry_modelo, entry_qtd):
     except ValueError:
         messagebox.showerror("Erro", "Quantidade deve ser um número inteiro!")
 
+# --- Função para excluir item selecionado da tabela ---
+
 def excluir_item(tabela):
     item_selecionado = tabela.selection()
     if not item_selecionado:
@@ -62,6 +66,8 @@ def excluir_item(tabela):
         conn.commit()
         tabela.delete(item_selecionado)
         messagebox.showinfo("Sucesso", "Item excluído com sucesso!")
+
+# --- Função para listar dados em uma nova janela ---
 
 def listar_dados(janela_pai):
     janela_lista = tk.Toplevel(janela_pai)
@@ -83,6 +89,8 @@ def listar_dados(janela_pai):
     
     btn_excluir = tk.Button(janela_lista, text="Excluir Item Selecionado", command=lambda: excluir_item(tabela), bg="#e74c3c", fg="white")
     btn_excluir.pack(pady=10)
+
+# --- Função para fechar o programa ---
 
 def sair(janela_para_fechar):
     if messagebox.askokcancel("Sair", "Deseja realmente sair do programa?"):
