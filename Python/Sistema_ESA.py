@@ -17,4 +17,4 @@ if mat >= 5 and port >= 5 and hist >= 5 and geo >= 5 and ing >= 5:
         print(f"Infelizmente, {name}, você não foi aprovado.\n")
 
 if mat < 5 or port < 5 or hist < 5 or geo < 5 or ing < 5:
-    print(f"Infelizmente, {name}, você não foi aprovado.")
+    print(f"Infelizmente, {name}, você não foi aprovado.\n")
