@@ -8,7 +8,6 @@
 #               36 = cyan    46 = cyan
 #               37 = grey    47 = grey
 
-
 print("\033[0;30;40mOlá, Mundo!\033[m")
 print("\033[1;30;40mOlá, Mundo!\033[m")
 print("\033[4;30;40mOlá, Mundo!\033[m")
